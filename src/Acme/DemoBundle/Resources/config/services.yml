@@ -1,0 +1,9 @@
+services:
+    github.client:
+        class: Guzzle\Http\Client
+        arguments: [%github.client.url%]
+        private: true
+
+    github.service:
+        class: Acme\DemoBundle\Service\GitHubService
+        arguments: [@github.client]
