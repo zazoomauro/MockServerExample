@@ -41,7 +41,7 @@ class GitHubService
 
         try {
             $response = $request->send();
-        } catch(ClientErrorResponseException $e) {
+        } catch (ClientErrorResponseException $e) {
             return null;
         }
 
